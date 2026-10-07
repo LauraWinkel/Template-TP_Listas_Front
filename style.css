@@ -4,5 +4,22 @@
     padding: 0px;
 }
 
-.comida-container {
+.comida-container{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 5vw;
+    margin-left: 2.5vw;
+}
+
+
+
+.card{
+    background-color: rgb(6, 194, 122);
+    height: 40vh;
+    width: 20vw;
+}
+
+.h2{
+    background-color: black;
 }
