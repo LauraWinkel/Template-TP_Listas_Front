@@ -90,6 +90,31 @@ function mostrarfood (){
     `
   })
 }
+//#NicoAyudame, explico esto y no lo entendi
+const buscador = document.getElementById("buscador")
+const filtrocategoria = document.getElementById("filtrocategoria")
+const filtroprovincia = document.getElementById("filtroprovincia")
+
+function filtrar(){
+  const comidasfiltradas = comidas.filtrer(comidas => {
+    return comida.categoria.includes(filtrocategoria.value)
+    && comida.provincia.includes(filtroprovincias.value)
+  })
+
+  mostrarfood (comidasfiltradas)
+}
+
+function buscar () {
+  const texto = buscador.value.toLowerCase()
+
+  const comidasfiltradas = comidas.filtrar(comida => {
+    return comida.nombre.toLowerCase().includes(texto)
+        || comida.provincia.toLowerCase().includes(texto)
+        || comida.categoria.toLowerCase().includes(texto)
+      })
+
+  mostrarfood (comidasfiltradas)
+}
 
 let form = document.getElementById("crearcomidas")
 form.addEventListener("submit",(event)=>{

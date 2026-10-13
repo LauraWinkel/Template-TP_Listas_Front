@@ -7,8 +7,24 @@
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    <header>
-      <!-- Para filtros y navegacion -->
+    <header class="filtros">
+      <input type="search" id="buscador" placeholder="Buscar por nombre, provincia o categoria">
+
+      <select id="filtrocategoria">
+        <option value="">Todas las categorias</option>
+        <option value="Parrilla">Parrilla</option>
+        <option value="Horno">Horno</option>
+        <option value="Guiso">Guiso</option>
+        <option value="Frito">Frito</option>
+      </select>
+
+      <select id="filtroprovincia">
+        <option value="">Todas las provincias</option>
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Cordoba">Cordoba</option>
+        <option value="Jujuy">Jujuy</option>
+        <option value="Salta">Salta</option>
+      </select>
     </header>
 
     <main class="comida-container" id="comidaContainer">
@@ -17,23 +33,22 @@
 
     <section class="addFood">
       <!-- Para el form para agregar comida -->
+      <form id="crearcomidas">
+        <label for="nombre">Nombre de la comida</label>
+        <input type="text"name="nombre"placeholder="Nombre de la comida"required>  
+      
+        <label for="categoria">Categoria de la comida</label>
+        <input type="text"name="categoria"placeholder="Categoria de la comida"required> 
+    
+        <label for="provincia">Provincia</label>
+        <input type="text"name="provincia"placeholder="Provincia"required> 
+    
+        <label for="ingredientes">ingrediente</label>
+        <input type="text"name="ingredientes"placeholder="ingredientes,...,...,"required> 
+      
+        <button type="submit">Crear</button>
+      </form>
     </section>
-
-  <form id="crearcomidas">
-    <label for="nombre">Nombre de la comida</label>
-    <input type="text"name="nombre"placeholder="Nombre de la comida"required>  
-  
-    <label for="categoria">Categoria de la comida</label>
-    <input type="text"name="categoria"placeholder="Categoria de la comida"required> 
-
-    <label for="provincia">Provincia</label>
-    <input type="text"name="provincia"placeholder="Provincia"required> 
-
-    <label for="ingredientes">ingrediente</label>
-    <input type="text"name="ingredientes"placeholder="ingredientes,...,...,"required> 
-  
-    <button type="submit">Crear</button>
-  </form>
 
     <script src="main.js"></script>
 </body>
