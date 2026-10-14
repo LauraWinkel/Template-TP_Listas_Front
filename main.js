@@ -107,7 +107,7 @@ function filtrar(){
 function buscar () {
   const texto = buscador.value.toLowerCase()
 
-  const comidasfiltradas = comidas.filtrar(comida => {
+  const comidasfiltradas = comidas.filter(comida => {
     return comida.nombre.toLowerCase().includes(texto)
         || comida.provincia.toLowerCase().includes(texto)
         || comida.categoria.toLowerCase().includes(texto)

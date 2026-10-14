@@ -4,15 +4,15 @@
     padding: 0px;
 }
 
-.comida-container{
+.comida-container{  /*Caja grande donde esta la Card*/
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
     gap: 5vw;
     margin-left: 2.5vw;
-}
+} 
 
-.card{
+.card{ /*Caja donde esta la informacion de la comida*/
     background-color: rgb(6, 194, 122);
     height: 40vh;
     width: 20vw;
@@ -20,19 +20,18 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
+    border: 2px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
 }
 
-.h1{
-    background-color: black;
-    font-family: sans-serif;
-}
-
-form{
-    background-color: rgb(173, 74, 74);
+form{ /*Form para agregar comida*/
+    background-color: rgb(167, 140, 140);
     height: 30vh;
     width: 20vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+    border: 3px solid rgb(180, 143, 129);
 } 
+
